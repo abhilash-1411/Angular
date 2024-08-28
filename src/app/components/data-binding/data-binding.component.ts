@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 @Component({
@@ -17,11 +17,14 @@ export class DataBindingComponent {
   isIndian:boolean=true;
   currentDate:Date=new Date;
   stateName:string="Madhya Pradesh";
+
+  firstName= signal('Abhilash Chandravanshi')
   constructor(){
 
   }
   changeCourseName(){
     this.courseName = "Reactjs";
+    this.firstName.set("MS Dhoni")
   }
   showMessage(message:string){
     alert(message);
