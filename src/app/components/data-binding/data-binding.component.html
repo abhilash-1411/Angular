@@ -9,7 +9,7 @@
 </div>
 
 <div class="row">
-    <div class="col-4">
+    <div class="col-6">
       <div class="row">
         <div class="col4 bg-success">
            1. Interpolation
@@ -24,13 +24,24 @@
             <input type="text" [value]="courseName" />
             <input [type]="inputType"/>
         </div>
+        <div class="col-4">
+           3. Event Binding
+        <button class="btn btn-success" (click)='showMessage("Welcome to Angular 18")'>Show Welcome</button>
+         <span (click)="showMessage('This is from span') ">Click Me</span>
+         <button class="btn btn-success" (click)='changeCourseName()'>Change Course</button>
+        </div>
       </div>
     </div>
-    <div class="col-4">
-    <button class="btn btn-success" (click)='showMessage("Welcome to Angular 18")'>Show Welcome</button>
-     <span (click)="showMessage('This is from span') ">Click Me</span>
-    </div>
-    <div class="col-4">
+    <div class="col-6">
+        <input type="text" [(ngModel)]="courseName" /> --{{courseName}}
+        <input type="checkbox" [(ngModel)]="isIndian" />
+
+        <select [(ngModel)]="stateName" >
+            <option value=" ">Select</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Goa">Goa</option>
+            <option value="Punjab">Punjab</option>
+        </select>
 
     </div>
 </div>
