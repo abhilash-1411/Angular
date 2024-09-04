@@ -62,3 +62,57 @@
   </div>
   
 </div>
+
+<div class="row">
+    <div class="col-3">
+    <ul>
+        <li *ngFor="let city of cityArray">
+          {{city}}
+        </li>
+    </ul>
+    </div>
+    <div class="col-3">
+  <div *ngFor="let cityName of cityArray">{{cityName}}</div>
+    </div>
+    <div class="col-3">
+        <select >
+            <option *ngFor="let cityName of cityArray" value="">{{cityName}}</option>
+        </select>
+
+    </div>
+    <div class="col-3">
+        <select >
+            <option *ngFor="let student of studentList" [value]="student.studentID">{{student.name}}</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stud of studentList">
+                    <td>{{stud.studentID}}</td>
+                    <td>{{stud.name}}</td>
+                    <td>{{stud.city}}</td>
+
+                    <td>
+                        <span *ngIf='stud.isActive'>
+                         Active 
+                        </span>
+                        <span *ngIf="!stud.isActive">
+                         De-Active
+                        </span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

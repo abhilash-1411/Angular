@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-structural-directive',
+  selector: 'app-attribute-directive',
   standalone: true,
   imports: [CommonModule,FormsModule],
-  templateUrl: './structural-directive.component.html',
-  styleUrl: './structural-directive.component.css'
+  templateUrl: './attribute-directive.component.html',
+  styleUrl: './attribute-directive.component.css'
 })
-export class StructuralDirectiveComponent {
+export class AttributeDirectiveComponent {
   isDiv1Visible: boolean = true;
   isDiv2Visible: boolean = true;
 
